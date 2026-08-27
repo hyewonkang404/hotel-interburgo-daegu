@@ -1,0 +1,276 @@
+:root {
+    --bg-main: #f5f6fa;
+    --sidebar-bg: #1e272e;
+    --grid-bg: #ffffff;
+    --border-wall: #2c3e50;
+    --hall-bg: #dfe4ea;
+    
+    --color-pst: #ffeaa7; --color-psd: #ff7f50; --color-pes: #ff6b81;
+    --color-pfs: #70a1ff; --color-plt: #7bed9f; --color-pbn: #46719f;
+    --color-pbs: #bf00ff; --color-pbd: #ffd500; --color-pbl: #eb4520;
+    --color-pbr: #ff00cc; --color-pbp: #fe0571;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Malgun Gothic', sans-serif; }
+body { display: flex; background-color: var(--bg-main); height: 100vh; overflow: hidden; }
+
+sidebar { width: 260px; background-color: var(--sidebar-bg); color: white; padding: 25px 15px; display: flex; flex-direction: column; overflow-y: auto; }
+.logo-area { margin-bottom: 35px; text-align: center; border-bottom: 1px solid #3d4e5d; padding-bottom: 15px; }
+.logo-area h2 { font-size: 22px; color: #f5f6fa; }
+.logo-area .sub-title { font-size: 11px; color: #9bc5a4; margin-top: 5px; }
+.menu-btn { background: transparent; border: none; color: #ced6e0; padding: 15px 20px; margin-bottom: 12px; text-align: left; font-size: 15px; cursor: pointer; border-radius: 6px; display: flex; justify-content: space-between; align-items: center; transition: all 0.2s; width: 100%; }
+.menu-btn:hover { background-color: rgba(255,255,255,0.05); color: white; }
+.menu-btn.active { background-color: #2ed573; color: white; font-weight: bold; }
+.room-count { font-size: 11px; background: rgba(0,0,0,0.3); padding: 2px 8px; border-radius: 10px; }
+
+main { flex: 1; padding: 30px; overflow-y: auto; display: flex; flex-direction: column; align-items: center; }
+.floor-plan { display: none; width: 100%; max-width: 1200px; }
+.floor-plan.active { display: block; }
+.floor-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 2px solid #ced6e0; width: 100%; }
+.total-badge { background-color: #2f3542; color: white; padding: 5px 15px; border-radius: 15px; font-size: 13px; font-weight: bold; }
+
+.layout-container { display: flex; flex-direction: column; width: 100%; gap: 15px; }
+.architect-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(40px, 1fr)); gap: 5px; }
+
+.grid-2f { grid-template-columns: repeat(6, 90px); grid-template-rows: repeat(15, 50px); }
+.grid-3f { grid-template-columns: repeat(16, 70px); grid-template-rows: repeat(16, 50px); }
+.grid-5f { grid-template-columns: repeat(12, 80px); grid-template-rows: repeat(16, 50px); }
+.grid-6f { grid-template-columns: repeat(6, 110px); grid-template-rows: repeat(12, 55px); }
+
+.facility { background-color: var(--hall-bg); border: 1px dashed #747d8c; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: bold; color: #2f3542; border-radius: 4px; text-align: center; }
+.room-card { border: 1px solid #747d8c; border-radius: 4px; display: flex; flex-direction: column; justify-content: center; align-items: center; font-size: 12px; font-weight: bold; padding: 4px; transition: transform 0.15s; background-color: #ffffff; cursor: pointer; }
+.room-card.large-room { width: 120px !important; height: 80px !important; z-index: 10; }
+.room-card:hover { transform: scale(1.03); z-index: 5; box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
+.room-card .rn { font-size: 13px; color: #1e272e; }
+.room-card .rt { font-size: 10px; margin-top: 2px; color: #57606f; padding: 1px 4px; border-radius: 3px; background: rgba(255,255,255,0.6); }
+
+.legend-panel { width: 280px; background: white; padding: 20px; border-radius: 8px; border: 1px solid #ced6e0; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+.legend-panel h3 { font-size: 15px; margin-bottom: 15px; color: #2c3e50; border-bottom: 1px solid #f1f2f6; padding-bottom: 8px; }
+.legend-item { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; font-size: 12px; font-weight: 600; color: #57606f; }
+.color-box { width: 24px; height: 16px; border-radius: 3px; border: 1px solid #747d8c; display: inline-block; }
+
+.room-card.pst, .color-box.pst { background-color: var(--color-pst); }
+.room-card.psd, .color-box.psd { background-color: var(--color-psd); }
+.room-card.pes, .color-box.pes { background-color: var(--color-pes); }
+.room-card.pfs, .color-box.pfs { background-color: var(--color-pfs); }
+.room-card.plt, .color-box.plt { background-color: var(--color-plt); }
+.room-card.pbn, .color-box.pbn { background-color: var(--color-pbn); }
+.room-card.pbs, .color-box.pbs { background-color: var(--color-pbs); }
+.room-card.pbd, .color-box.pbd { background-color: var(--color-pbd); }
+.room-card.pbl, .color-box.pbl { background-color: var(--color-pbl); }
+.room-card.pbr, .color-box.pbr { background-color: var(--color-pbr); }
+.room-card.pbp, .color-box.pbp { background-color: var(--color-pbp); }
+
+.map-container { position: relative; width: 1100px; height: 520px; margin: 0 auto; }
+#floor-title { text-align: center; font-size: 24px; margin-bottom: 30px; color: #333; }
+.view-title { text-align: center; color: #777; letter-spacing: 3px; font-size: 16px; margin: 20px 0; }
+
+/* ======== 새로 추가된 아치형 뷰 상단 구분선 스타일 ======== */
+.view-range-header {
+    display: flex;
+    position: relative;
+    width: 800px;
+    margin: 0 auto;
+    height: 30px;
+}
+.park-zone-title {
+    position: absolute;
+    left: 20%;
+    color: #424242;
+    margin: 0;
+    top: 5px;
+    font-weight: bold;
+}
+.river-zone-title {
+    position: absolute;
+    right: 20%;
+    color: #424242;
+    margin: 0;
+    top: 5px;
+    font-weight: bold;
+}
+.range-line-wrapper {
+    position: relative;
+    width: 800px;
+    margin: 0 auto 30px auto;
+    height: 10px;
+}
+.range-line {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #424242;
+}
+.range-line::before, .range-line::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    width: 2px;
+    height: 12px;
+    background-color: #424242;
+}
+.range-line::before { left: 0; }
+.range-line::after { right: 0; }
+.range-center-tick {
+    position: absolute;
+    top: -5px;
+    left: 57%; /* 16번(PARK)과 17번(RIVER) 사이를 정확히 가리키는 비율 */
+    width: 2px;
+    height: 12px;
+    background-color: #424242;
+}
+/* ======================================================= */
+
+/* ======== Park Village 새로운 뷰 표기 스타일 ======== */
+
+/* 전체 레이아웃을 감싸는 컨테이너 상대 좌표 설정 */
+.layout-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+/* 1. 왼쪽 세로 방향 뷰 (WATERFALL VIEW) */
+.vertical-view-left {
+    position: absolute;
+    left: -70px;
+    top: 30%;
+    transform: translateY(-50%) rotate(-90deg);
+    color: #424242;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    white-space: nowrap;
+}
+
+/* 2. 상단 가로 방향 뷰 (PARKING VIEW) */
+.horizontal-view-top {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #424242;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    white-space: nowrap;
+}
+
+/* 3. 오른쪽 하단 여백 쪽 뷰 (MAIN GATE VIEW) */
+.bottom-right-view {
+    position: absolute;
+    right: 500px;
+    bottom: 700px;
+    color: #424242;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px 12px;
+    border-radius: 4px;
+    border: 1px dashed #424242;
+}
+
+
+.room { position: absolute; border: 1px solid #333333; background: #ffffff; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 11px; cursor: pointer; transition: 0.2s; box-sizing: border-box; height: 60px; }
+.room:hover { background: #e3f2fd; z-index: 100; transform: scale(1.1); }
+.room span { display: block; width: 100%; text-align: center; white-space: nowrap; }
+.room span:first-child { font-weight: bold; margin-bottom: 2px; }
+
+.river-view { position: relative; height: 230px; width: 100%; display: flex; justify-content: center; }
+.curve-room { width: 40px; height: 60px; transform-origin: center 450px; }
+
+.center-facility { width: 100%; display: flex; justify-content: center; align-items: center; margin-top: -30px; margin-bottom: 5px; z-index: 5; }
+.center-map-img { width: 520px; height: auto; display: block; }
+
+.park-view-container { position: relative; }
+.park-view-integrated { position: relative; top: 20px; height: 60px; margin-inline-start: 180px; display: flex; justify-content: center; }
+#parkView { position: relative; white-space: nowrap; height: 60px; }
+.park-room { position: absolute; top: 0; width: 40px; min-width: 40px; }
+.wide-room { width: 80px !important; min-width: 80px !important; z-index: 10; }
+
+.type-ies { background-color: hsl(66, 100%, 51%) !important; color: black !important; border: 2px solid rgba(0,0,0,0.2) !important; font-weight: bold !important; } 
+.type-ijs { background-color: #ff9800 !important; color: white !important; border: 2px solid rgba(0,0,0,0.2) !important; font-weight: bold !important; } 
+.type-iss { background-color: #f44336 !important; color: white !important; border: 2px solid rgba(0,0,0,0.2) !important; font-weight: bold !important; } 
+.type-ids { background-color: #9c27b0 !important; color: white !important; border: 2px solid rgba(0,0,0,0.2) !important; font-weight: bold !important; } 
+.type-ips { background-color: #3f51b5 !important; color: white !important; border: 2px solid rgba(0,0,0,0.2) !important; font-weight: bold !important; } 
+.type-ifs { background-color: #4caf50 !important; color: white !important; border: 2px solid rgba(0,0,0,0.2) !important; font-weight: bold !important; } 
+
+.modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); }
+.modal:not(.hidden) { display: block; }
+.modal-content h2, .modal-content h3 { margin-top: 0; margin-bottom: 15px; }
+.modal-content p { margin: 10px 0; }
+
+.pv-modal-content { background-color: #fff; margin: 5% auto; padding: 30px; border-radius: 12px; width: 80%; max-width: 600px; position: relative; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+.pv-modal-content .close-icon { position: absolute; top: 10px; right: 15px; font-size: 24px; cursor: pointer; }
+
+.hotel-modal-content { background: white; border: 1px solid #333; padding: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); width: 320px; border-radius: 8px; box-sizing: border-box; margin: 10% auto; position: relative; }
+.hotel-modal-content button.close-btn { margin-top: 15px; padding: 10px 16px; background: #333; color: white; border: none; border-radius: 4px; cursor: pointer; width: 100%; font-weight: bold; }
+
+.slider-container { position: relative; display: flex; align-items: center; justify-content: space-between; margin-top: 15px; width: 100%; }
+.slider-wrapper { width: 260px; height: 180px; overflow: hidden; border-radius: 6px; border: 1px solid #ddd; box-shadow: 0 3px 8px rgba(0,0,0,0.1); margin: 0 auto; }
+.slider-track { display: flex; transition: transform 0.3s ease-in-out; width: max-content; }
+.slider-img { width: 260px; height: 180px; object-fit: cover; }
+.slider-btn { background: rgba(0, 0, 0, 0.6); color: white; border: none; cursor: pointer; padding: 10px 5px; font-size: 14px; border-radius: 4px; z-index: 10; position: absolute; top: 50%; transform: translateY(-50%); }
+.slider-btn.prev { left: -10px; }
+.slider-btn.next { right: -10px; }
+
+.slider-dots { text-align: center; margin-top: 8px; min-height: 10px; }
+.slider-dots .dot { cursor: pointer; height: 8px; width: 8px; margin: 0 4px; background-color: #bbb; border-radius: 50%; display: inline-block; }
+.slider-dots .dot.active { background-color: #333; }
+
+.modal-slider { position: relative; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; }
+.modal-slider .nav-btn { position: absolute; background: rgba(0,0,0,0.5); color: white; border: none; padding: 10px; cursor: pointer; border-radius: 50%; }
+.modal-slider .nav-btn.prev { left: 5px; }
+.modal-slider .nav-btn.next { right: 5px; }
+
+/* ======== 모바일 네비게이션 토글 스타일 ======== */
+#sidebar-toggle {
+    display: none; /* 기본 데스크톱 환경에서는 숨김 */
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1000;
+    background-color: #1e272e;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+/* 화면 너비 768px 이하 모바일 환경 설정 */
+@media screen and (max-width: 768px) {
+    #sidebar-toggle {
+        display: block; /* 모바일에서 버튼 표시 */
+    }
+    
+    body {
+        flex-direction: column;
+        overflow: auto;
+    }
+
+    sidebar {
+        position: fixed;
+        top: 0;
+        left: -260px; /* 평소에는 화면 왼쪽 바깥으로 숨김 */
+        height: 100%;
+        z-index: 999;
+        transition: left 0.3s ease;
+    }
+
+    sidebar.open {
+        left: 0; /* 클래스가 추가되면 화면 안으로 슬라이드인 */
+    }
+
+    main {
+        padding: 70px 15px 15px 15px; /* 상단 토글 버튼 공간 확보 */
+        height: auto;
+    }
+}

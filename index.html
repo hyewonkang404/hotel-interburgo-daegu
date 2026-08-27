@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>호텔인터불고대구 객실 배치도 (Main & Park Village)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 모바일용 네비게이션 토글 버튼 추가 -->
+    <button id="sidebar-toggle" onclick="toggleSidebar()">☰ 메뉴</button>
+    <sidebar>
+        <!-- 파크 빌리지 메뉴 -->
+        <div class="logo-area">
+            <h2>PARK VILLAGE</h2>
+            <div class="sub-title">파크빌리지 배치도</div>
+        </div>
+        <div class="nav-menu">
+            <button class="menu-btn active" onclick="openFloor('f2', this); checkMobileClose();">
+                <span>2 FLOOR</span><span class="room-count">20객실</span>
+            </button>
+            <button class="menu-btn" onclick="openFloor('f3', this); checkMobileClose();">
+                <span>3 FLOOR</span><span class="room-count">50객실</span>
+            </button>
+            <button class="menu-btn" onclick="openFloor('f5', this); checkMobileClose();">
+                <span>5 FLOOR</span><span class="room-count">36객실</span>
+            </button>
+            <button class="menu-btn" onclick="openFloor('f6', this); checkMobileClose();">
+                <span>6 FLOOR</span><span class="room-count">9객실</span>
+            </button>
+        </div>
+
+        <!-- 호텔 메뉴 -->
+        <div class="logo-area" style="margin-top: 30px;">
+            <h2>MAIN BUILDING</h2>
+            <div class="sub-title">본관 배치도</div>
+        </div>
+        <div class="nav-menu">
+            <button class="menu-btn" onclick="openHotelFloor(5, this); checkMobileClose();">
+                <span>5 FLOOR</span><span class="room-count">44객실</span>
+            </button>
+            <button class="menu-btn" onclick="openHotelFloor(6, this); checkMobileClose();">
+                <span>6 FLOOR</span><span class="room-count">44객실</span>
+            </button>
+            <button class="menu-btn" onclick="openHotelFloor(7, this); checkMobileClose();">
+                <span>7 FLOOR</span><span class="room-count">44객실</span>
+            </button>
+            <button class="menu-btn" onclick="openHotelFloor(8, this); checkMobileClose();">
+                <span>8 FLOOR</span><span class="room-count">40객실</span>
+            </button>
+            <button class="menu-btn" onclick="openHotelFloor(9, this); checkMobileClose();">
+                <span>9 FLOOR</span><span class="room-count">38객실</span>
+            </button>
+        </div>
+    </sidebar>
+
+    <main>
+        <!-- ==================== PARK VILLAGE 뷰 ==================== -->
+        <div id="f2" class="floor-plan active">
+            <div class="floor-header">
+                <h1>PARK VILLAGE 2F</h1>
+                <div class="total-badge">TOTAL ROOMS: 20</div>
+            </div>
+
+            <div class="layout-container">
+
+                <!-- 뷰 표기 요소 추가 -->
+        <div class="horizontal-view-top">PARKING VIEW</div>
+        <div class="vertical-view-left">WATERFALL VIEW</div>
+        <div class="bottom-right-view">MAIN GATE VIEW</div>
+
+                <div class="architect-grid grid-2f">
+                    <div class="facility banquet" style="grid-area: 1 / 1 / 3 / 3;">연회장</div>
+                    <div class="facility toilet" style="grid-area: 1 / 3 / 2 / 4;">화장실</div>
+                    <div class="facility stairs" style="grid-area: 2 / 3 / 3 / 4;">계단</div>
+                    <div class="facility lobby" style="grid-area: 1 / 4 / 3 / 7;">집회장 (대형 홀 구역)</div>
+                    <div class="facility terrace" style="grid-area: 3 / 2 / 4 / 3;">테라스</div>
+                    <div class="facility terrace" style="grid-area: 3 / 4 / 4 / 5;">E/V</div>
+                    <div class="facility terrace" style="grid-area: 7 / 4 / 9 / 5;">계단</div>
+                    
+                    <div class="room-card pst" onclick="showPvModal('2001', 'PST', '2 Single Beds', ['images/pst_1.jpg', 'images/pst_2.jpg'])" style="grid-area: 4 / 4 / 5 / 5;"><div class="rn">2001</div><div class="rt">PST</div></div>
+                    <div class="room-card pst" onclick="showPvModal('2002', 'PST', '2 Single Beds', ['images/pst_1.jpg', 'images/pst_2.jpg'])" style="grid-area: 5 / 4 / 6 / 5;"><div class="rn">2002</div><div class="rt">PST</div></div>
+                    <div class="room-card pst" onclick="showPvModal('2003', 'PST', '2 Single Beds', ['images/pst_1.jpg', 'images/pst_2.jpg'])" style="grid-area: 6 / 4 / 7 / 5;"><div class="rn">2003</div><div class="rt">PST</div></div>
+                    <div class="room-card psd" onclick="showPvModal('2005', 'PSD', 'Double Bed', ['images/psd_1.jpg', 'images/psd_2.jpg'])" style="grid-area: 9 / 4 / 10 / 5;"><div class="rn">2005</div><div class="rt">PSD</div></div>
+                    <div class="room-card pst" onclick="showPvModal('2006', 'PST', '2 Single Beds', ['images/pst_1.jpg', 'images/pst_2.jpg'])" style="grid-area: 10 / 4 / 11 / 5;"><div class="rn">2006</div><div class="rt">PST</div></div>
+                    <div class="room-card pst" onclick="showPvModal('2007', 'PST', '2 Single Beds', ['images/pst_1.jpg', 'images/pst_2.jpg'])" style="grid-area: 11 / 4 / 12 / 5;"><div class="rn">2007</div><div class="rt">PST</div></div>
+                    <div class="room-card pst" onclick="showPvModal('2008', 'PST', '2 Single Beds', ['images/pst_1.jpg', 'images/pst_2.jpg'])" style="grid-area: 12 / 4 / 13 / 5;"><div class="rn">2008</div><div class="rt">PST</div></div>
+                    <div class="room-card pst" onclick="showPvModal('2009', 'PST', '2 Single Beds', ['images/pst_1.jpg', 'images/pst_2.jpg'])" style="grid-area: 13 / 4 / 14 / 5;"><div class="rn">2009</div><div class="rt">PST</div></div>
+                    <div class="room-card pes" onclick="showPvModal('2010', 'PES', '1 Double + 1 Single', ['images/pes_1.jpg', 'images/pes_2.jpg'])" style="grid-area: 14 / 4 / 15 / 5;"><div class="rn">2010</div><div class="rt">PES</div></div>
+                    <div class="room-card pst" onclick="showPvModal('2011', 'PST', '2 Single Beds', ['images/pst_1.jpg', 'images/pst_2.jpg'])" style="grid-area: 14 / 2 / 15 / 3;"><div class="rn">2011</div><div class="rt">PST</div></div>
+                    <div class="room-card pst" onclick="showPvModal('2012', 'PST', '2 Single Beds', ['images/pst_1.jpg', 'images/pst_2.jpg'])" style="grid-area: 13 / 2 / 14 / 3;"><div class="rn">2012</div><div class="rt">PST</div></div>
+                    <div class="room-card pst" onclick="showPvModal('2013', 'PST', '2 Single Beds', ['images/pst_1.jpg', 'images/pst_2.jpg'])" style="grid-area: 12 / 2 / 13 / 3;"><div class="rn">2013</div><div class="rt">PST</div></div>
+                    <div class="room-card pst" onclick="showPvModal('2015', 'PST', '2 Single Beds', ['images/pst_1.jpg', 'images/pst_2.jpg'])" style="grid-area: 11 / 2 / 12 / 3;"><div class="rn">2015</div><div class="rt">PST</div></div>
+                    <div class="room-card pst" onclick="showPvModal('2016', 'PST', '2 Single Beds', ['images/pst_1.jpg', 'images/pst_2.jpg'])" style="grid-area: 10 / 2 / 11 / 3;"><div class="rn">2016</div><div class="rt">PST</div></div>
+                    <div class="room-card pst" onclick="showPvModal('2017', 'PST', '2 Single Beds', ['images/pst_1.jpg', 'images/pst_2.jpg'])" style="grid-area: 9 / 2 / 10 / 3;"><div class="rn">2017</div><div class="rt">PST</div></div>
+                    <div class="room-card pst" onclick="showPvModal('2018', 'PST', '2 Single Beds', ['images/pst_1.jpg', 'images/pst_2.jpg'])" style="grid-area: 8 / 2 / 9 / 3;"><div class="rn">2018</div><div class="rt">PST</div></div>
+                    <div class="room-card pst" onclick="showPvModal('2019', 'PST', '2 Single Beds', ['images/pst_1.jpg', 'images/pst_2.jpg'])" style="grid-area: 7 / 2 / 8 / 3;"><div class="rn">2019</div><div class="rt">PST</div></div>
+                    <div class="room-card pst" onclick="showPvModal('2020', 'PST', '2 Single Beds', ['images/pst_1.jpg', 'images/pst_2.jpg'])" style="grid-area: 6 / 2 / 7 / 3;"><div class="rn">2020</div><div class="rt">PST</div></div>
+                    <div class="room-card pst" onclick="showPvModal('2021', 'PST', '2 Single Beds', ['images/pst_1.jpg', 'images/pst_2.jpg'])" style="grid-area: 5 / 2 / 6 / 3;"><div class="rn">2021</div><div class="rt">PST</div></div>
+                    <div class="room-card pst" onclick="showPvModal('2022', 'PST', '2 Single Beds', ['images/pst_1.jpg', 'images/pst_2.jpg'])" style="grid-area: 4 / 2 / 5 / 3;"><div class="rn">2022</div><div class="rt">PST</div></div>
+                </div>
+                <div class="legend-panel">
+                    <h3>객실 타입 범례</h3>
+                    <div class="legend-item"><span class="color-box pst"></span> <span>PST : STANDARD TWIN (18)</span></div>
+                    <div class="legend-item"><span class="color-box psd"></span> <span>PSD : STANDARD DOUBLE (1)</span></div>
+                    <div class="legend-item"><span class="color-box pes"></span> <span>PES : ECONOMY SUITE (1)</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="f3" class="floor-plan">
+            <div class="floor-header">
+                <h1>PARK VILLAGE 3F</h1>
+                <div class="total-badge">TOTAL ROOMS: 50</div>
+            </div>
+
+            <div class="layout-container">
+                <!-- 뷰 표기 요소 추가 -->
+        <div class="horizontal-view-top">PARKING VIEW</div>
+        <div class="vertical-view-left">WATERFALL VIEW</div>
+        <div class="bottom-right-view">MAIN GATE VIEW</div>
+                <div class="architect-grid grid-3f" id="dynamic-grid-3f">
+                    <div class="facility terrace" style="grid-area: 3 / 4 / 5 / 6;">계단,E/V</div>
+                    <div class="facility terrace" style="grid-area: 9 / 4 / 11 / 5;">계단</div>
+                </div>
+                <div class="legend-panel">
+                    <h3>객실 타입 범례</h3>
+                    <div class="legend-item"><span class="color-box psd"></span> <span>PSD : STANDARD DOUBLE (4)</span></div>
+                    <div class="legend-item"><span class="color-box pst"></span> <span>PST : STANDARD TWIN (23)</span></div>
+                    <div class="legend-item"><span class="color-box plt"></span> <span>PDT : LUXURY TWIN (21)</span></div>
+                    <div class="legend-item"><span class="color-box pes"></span> <span>PES : ECONOMY SUITE (1)</span></div>
+                    <div class="legend-item"><span class="color-box pfs"></span> <span>PFS : FAMILY SUITE (1)</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="f5" class="floor-plan">
+            <div class="floor-header">
+                <h1>PARK VILLAGE 5F</h1>
+                <div class="total-badge">TOTAL ROOMS: 36</div>
+            </div>
+            
+            <div class="layout-container">
+                <!-- 뷰 표기 요소 추가 -->
+        <div class="horizontal-view-top">PARKING VIEW</div>
+        <div class="vertical-view-left">WATERFALL VIEW</div>
+        <div class="bottom-right-view">MAIN GATE VIEW</div>
+                <div class="architect-grid grid-5f" id="dynamic-grid-5f">
+                    <div class="facility terrace" style="grid-area: 4 / 4 / 6 / 6;">E/V</div>
+                    <div class="facility terrace" style="grid-area: 3 / 4 / 4 / 6;">계단</div>
+                    <div class="facility terrace" style="grid-area: 10 / 4 / 12 / 5;">계단</div>
+                </div>
+                <div class="legend-panel">
+                    <h3>객실 타입 범례</h3>
+                    <div class="legend-item"><span class="color-box psd"></span> <span>PSD : STANDARD DOUBLE (3)</span></div>
+                    <div class="legend-item"><span class="color-box pst"></span> <span>PST : STANDARD TWIN (24)</span></div>
+                    <div class="legend-item"><span class="color-box pbn"></span> <span>PBN : BOUTIQUE NORMAL (1)</span></div>
+                    <div class="legend-item"><span class="color-box pbs"></span> <span>PBS : BOUTIQUE SUPERIAL (1)</span></div>
+                    <div class="legend-item"><span class="color-box pds"></span> <span>PDS : DELUXE SUITE (1)</span></div>
+                    <div class="legend-item"><span class="color-box pbd"></span> <span>PBD : BOUTIQUE DELUXE (4)</span></div>
+                    <div class="legend-item"><span class="color-box pbl"></span> <span>PBL : BOUTIQUE LUXURY (1)</span></div>
+                    <div class="legend-item"><span class="color-box pbr"></span> <span>PBR : BOUTIQUE ROYAL (1)</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="f6" class="floor-plan">
+            <div class="floor-header">
+                <h1>PARK VILLAGE 6F</h1>
+                <div class="total-badge">TOTAL ROOMS: 9</div>
+            </div>
+            
+            <!-- 기존 가로형 뷰 타이틀 바 제거 완료 -->
+
+    <div class="layout-container" style="position: relative; min-height: 500px;">
+        
+        <!-- 왼쪽 세로 뷰 표기 -->
+        <div class="vertical-view-left">WATERFALL VIEW</div>
+
+        <!-- 상단 뷰 표기 -->
+        <div class="horizontal-view-top">PARKING VIEW</div>
+
+        <!-- 우측 하단 여백 뷰 표기 -->
+        <div class="bottom-right-view">MAIN GATE VIEW</div>
+
+        <!-- 기존 건축물 그리드 -->
+        <div class="architect-grid grid-6f" id="dynamic-grid-6f">
+            <div class="facility terrace" style="grid-area: 1 / 4 / 2 / 5;">E/V</div>
+            <div class="facility terrace" style="grid-area: 6 / 4 / 7 / 5;">계단</div>
+        </div>
+        
+                <div class="legend-panel">
+                    <h3>객실 타입 범례</h3>
+                    <div class="legend-item"><span class="color-box pbn"></span> <span>PBN : BOUTIQUE NORMAL (1)</span></div>
+                    <div class="legend-item"><span class="color-box pbs"></span> <span>PBS : BOUTIQUE SUPERIAL (3)</span></div>
+                    <div class="legend-item"><span class="color-box pbd"></span> <span>PBD : BOUTIQUE DELUXE (1)</span></div>
+                    <div class="legend-item"><span class="color-box pbp"></span> <span>PBP : BOUTIQUE PREMIUM (4)</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== HOTEL 뷰 ==================== -->
+        <div id="hotel-view-5" class="floor-plan">
+            <div class="map-container">
+                <h1 id="floor-title-5">5TH FLOOR</h1>
+                
+                <div class="view-range-header">
+                    <div class="view-title park-zone-title">PARK VIEW</div>
+                    <div class="view-title river-zone-title">RIVER VIEW</div>
+                </div>
+                <div class="range-line-wrapper">
+                    <div class="range-line"><div class="range-center-tick"></div></div>
+                </div>
+
+                <div class="river-view" id="riverView-5"></div>
+                <div class="center-facility"><img src="center-map.png" alt="Center Map" class="center-map-img"></div>
+                <div class="park-view-container">
+                    <div class="park-view-integrated" id="parkView-5"></div>
+                    <h2 class="view-title park-title">PARK VIEW</h2>
+                </div>
+            </div>
+        </div>
+
+        <div id="hotel-view-6" class="floor-plan">
+            <div class="map-container">
+                <h1 id="floor-title-6">6TH FLOOR</h1>
+                
+                <div class="view-range-header">
+                    <div class="view-title park-zone-title">PARK VIEW</div>
+                    <div class="view-title river-zone-title">RIVER VIEW</div>
+                </div>
+                <div class="range-line-wrapper">
+                    <div class="range-line"><div class="range-center-tick"></div></div>
+                </div>
+
+                <div class="river-view" id="riverView-6"></div>
+                <div class="center-facility"><img src="center-map.png" alt="Center Map" class="center-map-img"></div>
+                <div class="park-view-container">
+                    <div class="park-view-integrated" id="parkView-6"></div>
+                    <h2 class="view-title park-title">PARK VIEW</h2>
+                </div>
+            </div>
+        </div>
+
+        <div id="hotel-view-7" class="floor-plan">
+            <div class="map-container">
+                <h1 id="floor-title-7">7TH FLOOR</h1>
+                
+                <div class="view-range-header">
+                    <div class="view-title park-zone-title">PARK VIEW</div>
+                    <div class="view-title river-zone-title">RIVER VIEW</div>
+                </div>
+                <div class="range-line-wrapper">
+                    <div class="range-line"><div class="range-center-tick"></div></div>
+                </div>
+
+                <div class="river-view" id="riverView-7"></div>
+                <div class="center-facility"><img src="center-map.png" alt="Center Map" class="center-map-img"></div>
+                <div class="park-view-container">
+                    <div class="park-view-integrated" id="parkView-7"></div>
+                    <h2 class="view-title park-title">PARK VIEW</h2>
+                </div>
+            </div>
+        </div>
+
+        <div id="hotel-view-8" class="floor-plan">
+            <div class="map-container">
+                <h1 id="floor-title-8">8TH FLOOR</h1>
+                
+                <div class="view-range-header">
+                    <div class="view-title park-zone-title">PARK VIEW</div>
+                    <div class="view-title river-zone-title">RIVER VIEW</div>
+                </div>
+                <div class="range-line-wrapper">
+                    <div class="range-line"><div class="range-center-tick"></div></div>
+                </div>
+
+                <div class="river-view" id="riverView-8"></div>
+                <div class="center-facility"><img src="center-map.png" alt="Center Map" class="center-map-img"></div>
+                <div class="park-view-container">
+                    <div class="park-view-integrated" id="parkView-8"></div>
+                    <h2 class="view-title park-title">PARK VIEW</h2>
+                </div>
+            </div>
+        </div>
+
+        <div id="hotel-view-9" class="floor-plan">
+            <div class="map-container">
+                <h1 id="floor-title-9">9TH FLOOR</h1>
+                
+                <div class="view-range-header">
+                    <div class="view-title park-zone-title">PARK VIEW</div>
+                    <div class="view-title river-zone-title">RIVER VIEW</div>
+                </div>
+                <div class="range-line-wrapper">
+                    <div class="range-line"><div class="range-center-tick"></div></div>
+                </div>
+
+                <div class="river-view" id="riverView-9"></div>
+                <div class="center-facility"><img src="center-map.png" alt="Center Map" class="center-map-img"></div>
+                <div class="park-view-container">
+                    <div class="park-view-integrated" id="parkView-9"></div>
+                    <h2 class="view-title park-title">PARK VIEW</h2>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 모달 영역 -->
+    <div id="roomModal" class="modal hidden">
+        <div class="modal-content pv-modal-content">
+            <span class="close-icon" onclick="closePvModal()">&times;</span>
+            <h2>객실 상세 정보</h2>
+            <div class="modal-slider">
+                <button class="nav-btn prev" onclick="movePvSlide(-1)">&#10094;</button>
+                <img id="modalImg" src="" alt="객실 사진" style="width:100%; height:250px; object-fit:cover; border-radius:8px; display:none;">
+                <button class="nav-btn next" onclick="movePvSlide(1)">&#10095;</button>
+            </div>
+            <p><strong>객실 번호:</strong> <span id="modalNum"></span></p>
+            <p><strong>객실 타입:</strong> <span id="modalType"></span></p>
+            <p><strong>세부 사항:</strong> <span id="modalDesc" style="white-space: pre-line;"></span></p>
+        </div>
+    </div>
+
+    <div id="info-modal" class="modal hidden">
+        <div class="modal-content hotel-modal-content">
+             <h2 id="room-no">Room No. 000</h2>
+             <p id="room-type-display">Type: -</p>
+             <p id="room-info">Details: -</p>
+             <div class="slider-container">
+                 <button class="slider-btn prev" onclick="moveHotelSlide(-1)">&#10094;</button>
+                 <div class="slider-wrapper">
+                     <div id="slider-track" class="slider-track"></div>
+                 </div>
+                 <button class="slider-btn next" onclick="moveHotelSlide(1)">&#10095;</button>
+             </div>
+             <div id="slider-dots" class="slider-dots"></div>
+             <button onclick="closeHotelModal()" class="close-btn">닫기</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

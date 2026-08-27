@@ -293,7 +293,7 @@ const complexFloorData = {
     'dynamic-grid-3f': [
         { num: '3010', type: 'pst', r: 15, c: 4, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] },
         { num: '3011', type: 'pes', r: 16, c: 4, d: '1 Double + 2 Singles', img: ['images/pes_1.jpg', 'images/pes_2.jpg'] }, 
-        { num: '3012', type: 'pst', r: 16, c: 2, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] },
+        { num: '3012', type: 'pst', r: 16, c: 2, d: '1 Double + 1 Single', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] },
         { num: '3013', type: 'pst', r: 15, c: 2, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] },
         { num: '3009', type: 'pst', r: 14, c: 4, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] }, 
         { num: '3015', type: 'pst', r: 14, c: 2, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] },
@@ -357,25 +357,25 @@ const complexFloorData = {
         { num: '5026', type: 'pst', r: 5, c: 2, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] }, { num: '5027', type: 'pst', r: 4, c: 2, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] },
         { num: '5028', type: 'pst', r: 3, c: 2, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] }, { num: '5029', type: 'pst', r: 2, c: 2, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] },
         { num: '5031', type: 'psd', r: 1, c: 4, d: 'Double Bed', img: ['images/psd_1.jpg', 'images/psd_2.jpg'] }, { num: '5030', type: 'pds', r: 1, c: 2, d: '대표님객실' },
-        { num: '5032', type: 'pbn', r: 1, c: 7, d: 'King Bed', img: ['images/5032_1.jpg'] }, 
-        { num: '5033', type: 'pbd', r: 1, c: 9, d: 'King Bed', img: ['images/5033_1.jpg'] },
-        { num: '5035', type: 'pbd', r: 1, c: 11, d: 'King Bed', img: ['images/5033_1.jpg'] }, 
-        { num: '5036', type: 'pbl', r: 1, c: 13, d: 'King Bed', img: ['images/5036_1.jpg'] },
-        { num: '5037', type: 'pbd', r: 4, c: 13, d: 'King Bed', img: ['images/5037_1.jpg'] }, 
-        { num: '5038', type: 'pbd', r: 4, c: 11, d: 'King Bed', img: ['images/5038_1.jpg'] },
-        { num: '5039', type: 'pbs', r: 4, c: 9, d: '2 Single Beds', img: ['images/5039_1.jpg'] }, 
-        { num: '5050', type: 'pbr', r: 4, c: 7, d: '2 Double Beds', img: ['images/5050_1.jpg'] }
+        { num: '5032', type: 'pbn', r: 1, c: 7, d: '층 타입 : 단층\n침대타입 : King Bed\n욕실타입 : 샤워부스', img: ['images/5032_1.jpg'] }, 
+        { num: '5033', type: 'pbd', r: 1, c: 9, d: '층 타입 : 복층\n침대타입 : King Bed + 복층에 2 Single Beds\n욕실타입 : 샤워부스', img: ['images/5033_1.jpg'] },
+        { num: '5035', type: 'pbd', r: 1, c: 11, d: '층 타입 : 복층\n침대타입 : King Bed + 복층에 2 Single Beds\n욕실타입 : 샤워부스', img: ['images/5033_1.jpg'] }, 
+        { num: '5036', type: 'pbl', r: 1, c: 13, d: '층 타입 : 복층\n침대타입 : King Bed\n욕실타입 : 월풀', img: ['images/5036_1.jpg'] },
+        { num: '5037', type: 'pbd', r: 4, c: 13, d: '층 타입 : 복층\n침대타입 : King Bed + 복층에 2 Single Beds\n욕실타입 : 샤워부스', img: ['images/5037_1.jpg'] }, 
+        { num: '5038', type: 'pbd', r: 4, c: 11, d: '층 타입 : 복층\n침대타입 : King Bed + 복층에 2 Single Beds\n욕실타입 : 샤워부스', img: ['images/5038_1.jpg'] },
+        { num: '5039', type: 'pbs', r: 4, c: 9, d: '층 타입 : 단층\n침대타입 : 2 Single Beds\n욕실타입 : 욕조', img: ['images/5039_1.jpg'] }, 
+        { num: '5050', type: 'pbr', r: 4, c: 7, d: '층 타입 : 복층\n침대타입 : 2 Double Beds\n욕실타입 : 월풀', img: ['images/5050_1.jpg'] }
     ],
     'dynamic-grid-6f': [
-        { num: '6010', type: 'pbn', r: 1, c: 2, d: 'King Bed', img: ['images/6010_1.jpg'] }, 
-        { num: '6009', type: 'pbs', r: 3, c: 2, d: 'King Bed', img: ['images/6009_1.jpg'] },
-        { num: '6008', type: 'pbp', r: 5, c: 2, d: 'King Bed', img: ['images/6008_1.jpg'] }, 
-        { num: '6007', type: 'pbp', r: 7, c: 2, d: 'King Bed', img: ['images/6007_1.jpg'] },
-        { num: '6006', type: 'pbp', r: 9, c: 2, d: 'King Bed', img: ['images/6006_1.jpg'] },
-        { num: '6001', type: 'pbs', r: 2, c: 4, d: '2 Single Beds', img: ['images/6001_1.jpg'] }, 
-        { num: '6002', type: 'pbs', r: 4, c: 4, d: '2 Single Beds', img: ['images/6001_1.jpg'] },
-        { num: '6003', type: 'pbd', r: 7, c: 4, d: 'King Bed', img: ['images/6003_1.jpg'] }, 
-        { num: '6005', type: 'pbp', r: 9, c: 4, d: '2 Single Beds', img: ['images/6005_1.jpg'] }
+        { num: '6010', type: 'pbn', r: 1, c: 2, d: '층 타입 : 단층\n침대타입 : King Bed\n욕실타입 : 샤워부스', img: ['images/6010_1.jpg'] }, 
+        { num: '6009', type: 'pbs', r: 3, c: 2, d: '층 타입 : 복층\n침대타입 : King Bed\n욕실타입 : 샤워부스', img: ['images/6009_1.jpg'] },
+        { num: '6008', type: 'pbp', r: 5, c: 2, d: '층 타입 : 단층\n침대타입 : King Bed\n욕실타입 : 월풀', img: ['images/6008_1.jpg'] }, 
+        { num: '6007', type: 'pbp', r: 7, c: 2, d: '층 타입 : 복층\n침대타입 : King Bed\n욕실타입 : 월풀', img: ['images/6007_1.jpg'] },
+        { num: '6006', type: 'pbp', r: 9, c: 2, d: '층 타입 : 복층\n침대타입 : King Bed\n욕실타입 : 월풀', img: ['images/6006_1.jpg'] },
+        { num: '6001', type: 'pbs', r: 2, c: 4, d: '층 타입 : 복층\n침대타입 : 2 Single Beds\n욕실타입 : 샤워부스', img: ['images/6001_1.jpg'] }, 
+        { num: '6002', type: 'pbs', r: 4, c: 4, d: '층 타입 : 복층\n침대타입 : 2 Single Beds\n욕실타입 : 샤워부스', img: ['images/6001_1.jpg'] },
+        { num: '6003', type: 'pbd', r: 7, c: 4, d: '층 타입 : 단층\n침대타입 : King Bed\n욕실타입 : 욕조', img: ['images/6003_1.jpg'] }, 
+        { num: '6005', type: 'pbp', r: 9, c: 4, d: '층 타입 : 복층\n침대타입 : 2 Single Beds\n욕실타입 : 욕조', img: ['images/6005_1.jpg'] }
     ]
 };
 

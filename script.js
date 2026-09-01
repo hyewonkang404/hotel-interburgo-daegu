@@ -46,7 +46,7 @@ const floorData = {
             {no: 7111, type: "IDD", info: "Queen Bed"}, {no: 7112, type: "IDD", info: "Queen Bed"}, 
             {no: 7113, type: "IDT", info: "2 Single Beds"}, {no: 7115, type: "IDT", info: "2 Single Beds"}, {no: 7116, type: "IDT", info: "2 Single Beds"}, 
             {no: 7117, type: "IDT", info: "2 Single Beds"}, {no: 7118, type: "IDT", info: "2 Single Beds"}, {no: 7119, type: "IDT", info: "2 Single Beds"}, 
-            {no: 7120, type: "IDT", info: "2 Single Beds"}, {no: 7121, type: "IDT", info: "2 Single Beds"}, {no: 7122, type: "IDT", info: "2 Single Beds26/8/31 객실 누수로 O-O-O"}, 
+            {no: 7120, type: "IDT", info: "2 Single Beds"}, {no: 7121, type: "IDT", info: "2 Single Beds"}, {no: 7122, type: "IDT", info: "2 Single Beds\n26/8/31 객실 누수로 O-O-O"}, 
             {no: 7123, type: "IDT", info: "2 Single Beds"}, {no: 7125, type: "IDT", info: "2 Single Beds\n세면대 밑 목재 불량(판매지양)"}, {no: 7126, type: "IDT", info: "2 Single Beds"}, 
             {no: 7127, type: "IDT", info: "2 Single Beds"}, {no: 7128, type: "IDT", info: "2 Single Beds"}
         ],

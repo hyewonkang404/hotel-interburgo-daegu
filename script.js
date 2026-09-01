@@ -13,7 +13,7 @@ window.onload = () => {
 const floorData = {
     5: {
         title: "5TH FLOOR",
-        riverRooms: [5101, 5102, 5103, 5105, 5106, 5107, 5108, 5109, 5110, 5111, 5112, 5113, 5115, 5116, 5117, 5118, 5119, 5120, 5121, 5122, 5123, 5125, 5126, 5127, 5128],
+        riverRooms: [5101, 5102, 5103, 5105, 5106, {no: 5107, type: "IDT", info : "2 Single Beds\n비데 악취(판매지양)"}, 5108, 5109, 5110, 5111, 5112, 5113, 5115, 5116, 5117, 5118, 5119, 5120, 5121, 5122, 5123, 5125, 5126, 5127, 5128],
         parkRooms: [
             {no: 5159, type: "IES", info: "King Bed\n욕실타입 : 샤워부스"}, {no: 5158, type: "IDD", info: "Handicapped Room"}, 
             {no: 5157, type: "IDT", info: "2 Single Beds"}, {no: 5156, type: "IDT", info: "2 Single Beds"}, {no: 5155, type: "IDT", info: "2 Single Beds"}, 
@@ -46,8 +46,8 @@ const floorData = {
             {no: 7111, type: "IDD", info: "Queen Bed"}, {no: 7112, type: "IDD", info: "Queen Bed"}, 
             {no: 7113, type: "IDT", info: "2 Single Beds"}, {no: 7115, type: "IDT", info: "2 Single Beds"}, {no: 7116, type: "IDT", info: "2 Single Beds"}, 
             {no: 7117, type: "IDT", info: "2 Single Beds"}, {no: 7118, type: "IDT", info: "2 Single Beds"}, {no: 7119, type: "IDT", info: "2 Single Beds"}, 
-            {no: 7120, type: "IDT", info: "2 Single Beds"}, {no: 7121, type: "IDT", info: "2 Single Beds"}, {no: 7122, type: "IDT", info: "2 Single Beds"}, 
-            {no: 7123, type: "IDT", info: "2 Single Beds"}, {no: 7125, type: "IDT", info: "2 Single Beds"}, {no: 7126, type: "IDT", info: "2 Single Beds"}, 
+            {no: 7120, type: "IDT", info: "2 Single Beds"}, {no: 7121, type: "IDT", info: "2 Single Beds"}, {no: 7122, type: "IDT", info: "2 Single Beds26/8/31 객실 누수로 O-O-O"}, 
+            {no: 7123, type: "IDT", info: "2 Single Beds"}, {no: 7125, type: "IDT", info: "2 Single Beds\n세면대 밑 목재 불량(판매지양)"}, {no: 7126, type: "IDT", info: "2 Single Beds"}, 
             {no: 7127, type: "IDT", info: "2 Single Beds"}, {no: 7128, type: "IDT", info: "2 Single Beds"}
         ],
         parkRooms: [
@@ -82,18 +82,18 @@ const floorData = {
     9: {
         title: "9TH FLOOR",
         riverRooms: [
-            {no: 9101, type: "IPD", info: "Queen Bed"}, {no: 9102, type: "IPD", info: "Queen Bed"}, {no: 9103, type: "IPD", info: "Queen Bed"}, 
-            {no: 9105, type: "IPD", info: "Queen Bed"}, {no: 9106, type: "IPD", info: "Queen Bed"}, {no: 9107, type: "IPD", info: "Queen Bed"}, 
-            {no: 9108, type: "IPD", info: "Queen Bed"}, {no: 9109, type: "IPD", info: "Queen Bed"}, {no: 9110, type: "IPD", info: "Queen Bed"}, 
-            {no: 9111, type: "IPD", info: "Queen Bed"}, {no: 9112, type: "IPD", info: "Queen Bed"}, {no: 9113, type: "IPD", info: "Queen Bed"},
+            {no: 9101, type: "IPD", info: "Queen Bed\n복사열 심함(판매지양)"}, {no: 9102, type: "IPD", info: "Queen Bed"}, {no: 9103, type: "IPD", info: "Queen Bed"}, 
+            {no: 9105, type: "IPD", info: "Queen Bed\n넷플릭스X"}, {no: 9106, type: "IPD", info: "Queen Bed\n넷플릭스X"}, {no: 9107, type: "IPD", info: "Queen Bed"}, 
+            {no: 9108, type: "IPD", info: "Queen Bed\n넷플릭스X"}, {no: 9109, type: "IPD", info: "Queen Bed"}, {no: 9110, type: "IPD", info: "Queen Bed"}, 
+            {no: 9111, type: "IPD", info: "Queen Bed"}, {no: 9112, type: "IPD", info: "Queen Bed\n음식냄새 판매금지(당직객실)"}, {no: 9113, type: "IPD", info: "Queen Bed"},
             {no: 9115, type: "IPD", info: "Queen Bed"}, {no: 9116, type: "IPD", info: "Queen Bed"}, {no: 9117, type: "IPD", info: "Queen Bed"}, 
-            {no: 9118, type: "IPD", info: "Queen Bed"}, {no: 9119, type: "IPD", info: "Queen Bed"}, {no: 9120, type: "IPD", info: "Queen Bed"}, 
+            {no: 9118, type: "IPD", info: "Queen Bed"}, {no: 9119, type: "IPD", info: "Queen Bed\n26/8/31 객실 누수로 O-O-O"}, {no: 9120, type: "IPD", info: "Queen Bed"}, 
             {no: 9121, type: "IPD", info: "Queen Bed"}, {no: 9122, type: "IPD", info: "Queen Bed"}, {no: 9123, type: "IPD", info: "Queen Bed"}, 
             {no: 9125, type: "IPD", info: "Queen Bed"}
         ],
         parkRooms: [
             {no: 9152, type: "IES", info: "King Bed\n욕실타입 : 샤워부스"}, {no: 9151, type: "IDD", info: "Queen Bed"}, {no: 9150, type: "IDD", info: "Queen Bed"},
-            {no: 9139, type: "IDD", info: "Queen Bed"}, {no: 9138, type: "IDD", info: "Queen Bed"}, {no: 9137, type: "ISS", info: "King Bed\n욕실타입 : 욕조"}, {no: 9136, type: "IDT", info: "2 Single Beds"}, {no: 9135, type: "IDT", info: "2 Single Beds"}, {no: 9133, type: "IDT", info: "2 Single Beds"}, {no: 9132, type: "IDD", info: "Queen Bed"}, {no: 9131, type: "IDD", info: "Queen Bed"}, {no: 9130, type: "IDD", info: "Queen Bed"}, {no: 9129, type: "IJS", info: "King Bed\n욕실타입 : 욕조"}, {no: 9128, type: "ISD", info: "Double Bed"}, {no: 9127, type: "ISD", info: "Double Bed"}, {no: 9126, type: "IPS", info: "King Bed\n욕실타입 : 월풀"}
+            {no: 9139, type: "IDD", info: "Queen Bed"}, {no: 9138, type: "IDD", info: "Queen Bed"}, {no: 9137, type: "ISS", info: "King Bed\n욕실타입 : 욕조"}, {no: 9136, type: "IDT", info: "2 Single Beds"}, {no: 9135, type: "IDT", info: "2 Single Beds"}, {no: 9133, type: "IDT", info: "2 Single Beds"}, {no: 9132, type: "IDD", info: "Queen Bed"}, {no: 9131, type: "IDD", info: "Queen Bed"}, {no: 9130, type: "IDD", info: "Queen Bed"}, {no: 9129, type: "IJS", info: "King Bed\n욕실타입 : 욕조"}, {no: 9128, type: "ISD", info: "Double Bed"}, {no: 9127, type: "ISD", info: "Double Bed\n복사열 심함(판매지양)"}, {no: 9126, type: "IPS", info: "King Bed\n욕실타입 : 월풀"}
         ]
     }
 };
@@ -317,16 +317,16 @@ const complexFloorData = {
         { num: '3027', type: 'psd', r: 3, c: 2, d: 'Double Bed', img: ['images/psd_1.jpg', 'images/psd_2.jpg'] },
         { num: '3028', type: 'pst', r: 2, c: 2, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] }, 
         { num: '3029', type: 'pfs', r: 1, c: 2, d: '1 Double + 2 Singles', img: ['images/pfs_1.jpg', 'images/pfs_2.jpg'] },
-        { num: '3030', type: 'pst', r: 1, c: 4, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] }, 
+        { num: '3030', type: 'pst', r: 1, c: 4, d: '2 Single Beds\n우천시 누수 발생', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] }, 
         { num: '3031', type: 'pst', r: 1, c: 5, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] }, 
         { num: '3032', type: 'pst', r: 1, c: 6, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] },
-        { num: '3033', type: 'plt', r: 1, c: 7, d: '2 Double Beds', img: ['images/plt.jpg', 'images/plt_2.jpg'] }, 
+        { num: '3033', type: 'plt', r: 1, c: 7, d: '2 Double Beds\n에어컨 실외기 소음(2단까지만 사용)', img: ['images/plt.jpg', 'images/plt_2.jpg'] }, 
         { num: '3035', type: 'plt', r: 1, c: 8, d: '2 Double Beds', img: ['images/plt.jpg', 'images/plt_2.jpg'] }, 
         { num: '3036', type: 'plt', r: 1, c: 9, d: '2 Double Beds', img: ['images/plt.jpg', 'images/plt_2.jpg'] },
         { num: '3037', type: 'plt', r: 1, c: 10, d: '2 Double Beds', img: ['images/plt.jpg', 'images/plt_2.jpg'] }, 
         { num: '3038', type: 'plt', r: 1, c: 11, d: '2 Double Beds', img: ['images/plt.jpg', 'images/plt_2.jpg'] }, 
         { num: '3039', type: 'plt', r: 1, c: 12, d: '2 Double Beds', img: ['images/plt.jpg', 'images/plt_2.jpg'] },
-        { num: '3050', type: 'plt', r: 1, c: 13, d: '2 Double Beds', img: ['images/plt.jpg', 'images/plt_2.jpg'] }, 
+        { num: '3050', type: 'plt', r: 1, c: 13, d: '2 Double Beds\n실외기 소음', img: ['images/plt.jpg', 'images/plt_2.jpg'] }, 
         { num: '3051', type: 'plt', r: 1, c: 14, d: '2 Double Beds', img: ['images/plt.jpg', 'images/plt_2.jpg'] }, 
         { num: '3052', type: 'plt', r: 1, c: 15, d: '2 Double Beds', img: ['images/plt.jpg', 'images/plt_2.jpg'] },
         { num: '3053', type: 'plt', r: 1, c: 16, d: '2 Double Beds', img: ['images/plt.jpg', 'images/plt_2.jpg'] },
@@ -337,31 +337,31 @@ const complexFloorData = {
         { num: '3061', type: 'plt', r: 4, c: 10, d: '2 Double Beds', img: ['images/plt.jpg', 'images/plt_2.jpg'] }, 
         { num: '3060', type: 'plt', r: 4, c: 11, d: '2 Double Beds', img: ['images/plt.jpg', 'images/plt_2.jpg'] },
         { num: '3059', type: 'plt', r: 4, c: 12, d: '2 Double Beds', img: ['images/plt.jpg', 'images/plt_2.jpg'] }, 
-        { num: '3058', type: 'plt', r: 4, c: 13, d: '2 Double Beds', img: ['images/plt.jpg', 'images/plt_2.jpg'] }, 
+        { num: '3058', type: 'plt', r: 4, c: 13, d: '2 Double Beds\n실외기 소음', img: ['images/plt.jpg', 'images/plt_2.jpg'] }, 
         { num: '3057', type: 'plt', r: 4, c: 14, d: '2 Double Beds', img: ['images/plt.jpg', 'images/plt_2.jpg'] },
         { num: '3056', type: 'plt', r: 4, c: 15, d: '2 Double Beds', img: ['images/plt.jpg', 'images/plt_2.jpg'] }, 
         { num: '3055', type: 'plt', r: 4, c: 16, d: '2 Double Beds', img: ['images/plt.jpg', 'images/plt_2.jpg'] }
     ],
     'dynamic-grid-5f': [
-        { num: '5011', type: 'psd', r: 17, c: 4, d: 'Double Bed', img: ['images/psd_1.jpg', 'images/psd_2.jpg'] }, { num: '5012', type: 'pst', r: 17, c: 2, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] },
-        { num: '5010', type: 'pst', r: 16, c: 4, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] }, { num: '5013', type: 'pst', r: 16, c: 2, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] },
+        { num: '5011', type: 'psd', r: 17, c: 4, d: 'Double Bed\n온수불량', img: ['images/psd_1.jpg', 'images/psd_2.jpg'] }, { num: '5012', type: 'pst', r: 17, c: 2, d: '2 Single Beds\n온수불량', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] },
+        { num: '5010', type: 'pst', r: 16, c: 4, d: '2 Single Beds\n온수불량', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] }, { num: '5013', type: 'pst', r: 16, c: 2, d: '2 Single Beds\n온수불량', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] },
         { num: '5009', type: 'pst', r: 15, c: 4, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] }, { num: '5015', type: 'pst', r: 15, c: 2, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] },
         { num: '5008', type: 'pst', r: 14, c: 4, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] }, { num: '5016', type: 'pst', r: 14, c: 2, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] },
-        { num: '5007', type: 'pst', r: 13, c: 4, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] }, { num: '5017', type: 'pst', r: 13, c: 2, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] },
+        { num: '5007', type: 'pst', r: 13, c: 4, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] }, { num: '5017', type: 'pst', r: 13, c: 2, d: '2 Single Beds\n우천시 누수 발생 확인 후 판매', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] },
         { num: '5006', type: 'psd', r: 12, c: 4, d: 'Double Bed', img: ['images/psd_1.jpg', 'images/psd_2.jpg'] }, { num: '5018', type: 'pst', r: 12, c: 2, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] },
         { num: '5005', type: 'pst', r: 9, c: 4, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] }, { num: '5019', type: 'pst', r: 11, c: 2, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] },
         { num: '5003', type: 'pst', r: 8, c: 4, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] }, { num: '5020', type: 'pst', r: 10, c: 2, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] },
         { num: '5002', type: 'pst', r: 7, c: 4, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] }, { num: '5021', type: 'pst', r: 9, c: 2, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] },
         { num: '5001', type: 'pst', r: 6, c: 4, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] }, { num: '5022', type: 'pst', r: 8, c: 2, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] },
-        { num: '5023', type: 'pst', r: 7, c: 2, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] }, { num: '5025', type: 'pst', r: 6, c: 2, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] },
-        { num: '5026', type: 'pst', r: 5, c: 2, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] }, { num: '5027', type: 'pst', r: 4, c: 2, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] },
+        { num: '5023', type: 'pst', r: 7, c: 2, d: '2 Single Beds\n우천시 누수 발생 확인 후 판매', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] }, { num: '5025', type: 'pst', r: 6, c: 2, d: '2 Single Beds\n우천시 누수 발생 확인 후 판매', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] },
+        { num: '5026', type: 'pst', r: 5, c: 2, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] }, { num: '5027', type: 'pst', r: 4, c: 2, d: '2 Single Beds\n우천시 누수 발생', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] },
         { num: '5028', type: 'pst', r: 3, c: 2, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] }, { num: '5029', type: 'pst', r: 2, c: 2, d: '2 Single Beds', img: ['images/pst_1.jpg', 'images/pst_2.jpg'] },
         { num: '5031', type: 'psd', r: 1, c: 4, d: 'Double Bed', img: ['images/psd_1.jpg', 'images/psd_2.jpg'] }, { num: '5030', type: 'pds', r: 1, c: 2, d: '대표님객실' },
         { num: '5032', type: 'pbn', r: 1, c: 7, d: '\n층 타입 : 단층\n침대타입 : King Bed\n욕실타입 : 샤워부스', img: ['images/5032_1.jpg'] }, 
         { num: '5033', type: 'pbd', r: 1, c: 9, d: '\n층 타입 : 복층\n침대타입 : King Bed + 복층에 2 Single Beds\n욕실타입 : 샤워부스', img: ['images/5033_1.jpg'] },
         { num: '5035', type: 'pbd', r: 1, c: 11, d: '\n층 타입 : 복층\n침대타입 : King Bed + 복층에 2 Single Beds\n욕실타입 : 샤워부스', img: ['images/5033_1.jpg'] }, 
         { num: '5036', type: 'pbl', r: 1, c: 13, d: '\n층 타입 : 복층\n침대타입 : King Bed\n욕실타입 : 월풀', img: ['images/5036_1.jpg'] },
-        { num: '5037', type: 'pbd', r: 4, c: 13, d: '\n층 타입 : 복층\n침대타입 : King Bed + 복층에 2 Single Beds\n욕실타입 : 샤워부스', img: ['images/5037_1.jpg'] }, 
+        { num: '5037', type: 'pbd', r: 4, c: 13, d: '\n층 타입 : 복층\n침대타입 : King Bed + 복층에 2 Single Beds\n욕실타입 : 샤워부스\n안전기 고장(판매지양)', img: ['images/5037_1.jpg'] }, 
         { num: '5038', type: 'pbd', r: 4, c: 11, d: '\n층 타입 : 복층\n침대타입 : King Bed + 복층에 2 Single Beds\n욕실타입 : 샤워부스', img: ['images/5038_1.jpg'] },
         { num: '5039', type: 'pbs', r: 4, c: 9, d: '\n층 타입 : 단층\n침대타입 : 2 Single Beds\n욕실타입 : 욕조', img: ['images/5039_1.jpg'] }, 
         { num: '5050', type: 'pbr', r: 4, c: 7, d: '\n층 타입 : 복층\n침대타입 : 2 Double Beds\n욕실타입 : 월풀', img: ['images/5050_1.jpg'] }
